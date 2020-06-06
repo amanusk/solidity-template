@@ -1,0 +1,14 @@
+node_modules
+build
+config.js
+deploy.js
+coverage
+coverage.json
+scTopics
+*.log
+coverageEnv/
+.*.swp
+.secret*
+
+.DS_Store
+.infura_key
