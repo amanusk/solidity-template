@@ -34,6 +34,7 @@
     "braces": "^3.0.2",
     "commander": "^5.1.0",
     "ethereumjs-tx": "^2.1.0",
+    "lodash": "^4.17.19",
     "mem": "^6.1.0",
     "node-fetch": "^2.6.0",
     "openzeppelin-solidity": "2.3",
