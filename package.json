@@ -11,14 +11,12 @@
   },
   "scripts": {
     "version:current": "echo $npm_package_version",
-    "release": "git add . && yarn version && VERSION=$(yarn -s version:current) && git push origin release/v$VERSION && git push origin v$VERSION && git checkout master && git pull --rebase && git rebase release/v$VERSION && git push origin master && git checkout dev && git pull --rebase && git rebase release/v$VERSION && git push origin dev",
     "ganache": "./node_modules/.bin/ganache-cli -p 7545 -i 47 -l 4700000 --hardfork istanbul",
     "compile:dev": "./node_modules/.bin/truffle compile --network development",
     "migrate:dev": "./node_modules/.bin/truffle migrate --network development",
     "migrate:dev:reset": "./node_modules/.bin/truffle migrate --network development --reset",
     "test:dev": "./node_modules/.bin/truffle test --network development",
     "test:coverage": "./node_modules/.bin/truffle run coverage",
-    "test:security": "./node_modules/.bin/truffle run verify",
     "test:ropsten": "mocha ./test_ropsten/*",
     "solium:all": "./node_modules/.bin/solium -c .soliumrc.json -d ./contracts/"
   },
