@@ -3,8 +3,19 @@ const web3 = require('web3');
 
 const fs = require('fs');
 
-const privateKey = fs.readFileSync('.secret').toString().trim();
-const infuraKey = fs.readFileSync('.infura_key').toString().trim();
+let privateKey;
+let infuraKey;
+
+try {
+  privateKey = fs.readFileSync('.secret').toString().trim();
+} catch (e) {
+  console.log('Create a .secret file to upload to the blockchain');
+}
+try {
+  infuraKey = fs.readFileSync('.infura_key').toString().trim();
+} catch (e) {
+  console.log('Create a .secret file to upload to the blockchain');
+}
 
 module.exports = {
   solc: {
